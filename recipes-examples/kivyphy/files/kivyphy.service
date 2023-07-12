@@ -1,0 +1,12 @@
+[Unit]
+Description=PHYTEC's Kivy demo
+Requires=weston.service
+After=westion.service
+
+[Service]
+Environment=wayland DISPLAY=:0 XDG_RUNTIME_DIR=/run/user/0 KCFG_GRAPHICS_FULLSCREEN=auto
+ExecStart=/usr/bin/kivydemo
+
+[Install]
+WantedBy=graphical.target
+

@@ -1,0 +1,23 @@
+diff --git a/kivy/core/camera/camera_gi.py b/kivy/core/camera/camera_gi.py
+index f9f4fe657..7a03d4f1e 100644
+--- a/kivy/core/camera/camera_gi.py
++++ b/kivy/core/camera/camera_gi.py
+@@ -141,17 +141,7 @@ class CameraGi(CameraBase):
+         try:
+             buf = sample.get_buffer()
+             result, mapinfo = buf.map(Gst.MapFlags.READ)
+-
+-            # We cannot get the data out of mapinfo, using Gst 1.0.6 + Gi 3.8.0
+-            # related bug report:
+-            # https://bugzilla.gnome.org/show_bug.cgi?id=6t8663
+-            # ie: mapinfo.data is normally a char*, but here, we have an int
+-            # So right now, we use ctypes instead to read the mapinfo ourself.
+-            addr = mapinfo.__hash__()
+-            c_mapinfo = _MapInfo.from_address(addr)
+-
+-            # now get the memory
+-            self._buffer = string_at(c_mapinfo.data, mapinfo.size)
++            self._buffer = bytes(mapinfo.data)
+             self._copy_to_gpu()
+         finally:
+             if mapinfo is not None:

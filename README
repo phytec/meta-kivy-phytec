@@ -1,0 +1,46 @@
+This README file contains information on the contents of the meta-phykivy layer.
+
+Please see the corresponding sections below for details.
+
+Dependencies
+============
+
+  URI: <first dependency>
+  branch: <branch name>
+
+  URI: <second dependency>
+  branch: <branch name>
+
+  .
+  .
+  .
+
+Patches
+=======
+
+Please submit any patches against the meta-phykivy layer to the xxxx mailing list (xxxx@zzzz.org)
+and cc: the maintainer:
+
+Maintainer: XXX YYYYYY <xxx.yyyyyy@zzzzz.com>
+
+Table of Contents
+=================
+
+  I. Adding the meta-phykivy layer to your build
+ II. Misc
+
+
+I. Adding the meta-phykivy layer to your build
+=================================================
+
+Run 'bitbake-layers add-layer meta-phykivy'
+
+II. Misc
+========
+
+This layer contains:
+- a fix for sdl2 to make it work with OPENGL ES 
+- a change in the weston init to allow the LVSD output by default instead of HDMI
+- patches for kivy
+- kivyMD bb file (Kivy Material Design) and a patch for it
+- Kivy demo service 

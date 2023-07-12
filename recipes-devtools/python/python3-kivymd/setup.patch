@@ -1,0 +1,21 @@
+--- a/setup.py
++++ b/setup.py
+@@ -90,13 +90,15 @@
+         ),
+         package_dir={"kivymd": "kivymd"},
+         package_data={
++            "": [
++		"*.kv",
++                "*.pot",
++                "*.po",
++            ],
+             "kivymd": [
+                 "images/*.png",
+                 "images/*.atlas",
+                 "fonts/*.ttf",
+-                *glob_paths(".kv"),
+-                *glob_paths(".pot"),
+-                *glob_paths(".po"),
+             ]
+         },
+         extras_require={

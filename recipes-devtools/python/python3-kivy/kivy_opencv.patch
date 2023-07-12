@@ -1,0 +1,13 @@
+diff --git a/kivy/core/camera/camera_opencv.py b/kivy/core/camera/camera_opencv.py
+index f24a52009..46c4049ea 100644
+--- a/kivy/core/camera/camera_opencv.py
++++ b/kivy/core/camera/camera_opencv.py
+@@ -134,7 +134,7 @@ class CameraOpenCV(CameraBase):
+             return
+         if self._texture is None:
+             # Create the texture
+-            self._texture = Texture.create(self._resolution)
++            self._texture = Texture.create(self._resolution, colorfmt='rgb')
+             self._texture.flip_vertical()
+             self.dispatch('on_load')
+         try:
