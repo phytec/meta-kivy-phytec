@@ -4,7 +4,7 @@ Requires=weston.service
 After=westion.service
 
 [Service]
-Environment=wayland DISPLAY=:0 XDG_RUNTIME_DIR=/run/user/0 KCFG_GRAPHICS_FULLSCREEN=auto
+Environment=wayland DISPLAY=:0 XDG_RUNTIME_DIR=/run/user/0 KCFG_GRAPHICS_FULLSCREEN=auto KIVY_GLES_LIMITS=1 KCFG_INPUT_MOUSE='mouse,disable_on_activity' KCFG_KIVY_KEYBOARD_MODE='systemanddock'
 ExecStart=/usr/bin/kivydemo
 
 [Install]
