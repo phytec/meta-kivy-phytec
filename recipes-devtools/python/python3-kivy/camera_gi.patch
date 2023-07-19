@@ -1,8 +1,18 @@
 diff --git a/kivy/core/camera/camera_gi.py b/kivy/core/camera/camera_gi.py
-index f9f4fe657..7a03d4f1e 100644
+index f9f4fe657..4f596d8a6 100644
 --- a/kivy/core/camera/camera_gi.py
 +++ b/kivy/core/camera/camera_gi.py
-@@ -141,17 +141,7 @@ class CameraGi(CameraBase):
+@@ -6,7 +6,8 @@ Implement CameraBase with Gi / Gstreamer, working on both Python 2 and 3
+ '''
+ 
+ __all__ = ('CameraGi', )
+-
++import gi
++gi.require_version('Gst', '1.0')
+ from gi.repository import Gst
+ from kivy.clock import Clock
+ from kivy.graphics.texture import Texture
+@@ -141,17 +142,7 @@ class CameraGi(CameraBase):
          try:
              buf = sample.get_buffer()
              result, mapinfo = buf.map(Gst.MapFlags.READ)
