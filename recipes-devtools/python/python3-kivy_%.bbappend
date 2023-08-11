@@ -4,3 +4,4 @@ SRC_URI += " file://cutbuffer.patch \
     file://camera_gi.patch \
     file://kivy_opencv.patch \
    "
+

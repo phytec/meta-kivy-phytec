@@ -22,6 +22,7 @@ IMAGE_INSTALL += "\
     ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'weston weston-init', '', d)} \
     python3-kivy \
     kivyphy \
+    configkivy \
 "
 
 IMAGE_INSTALL += "${@bb.utils.contains('DISTRO_FEATURES', 'x11 wayland', 'weston-xwayland', '', d)}"
