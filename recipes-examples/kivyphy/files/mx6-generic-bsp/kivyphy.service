@@ -1,0 +1,12 @@
+[Unit]
+Description=PHYTEC's Kivy demo
+Wants=systemd-udev-settle.service weston.service
+After=systemd-udev-settle.service weston.service
+
+[Service]
+User=weston
+Environment= WAYLAND_DISPLAY=/run/wayland-0 DISPLAY=:0 XDG_RUNTIME_DIR=/run/user/0 KCFG_GRAPHICS_FULLSCREEN=auto KIVY_GLES_LIMITS=1 KCFG_INPUT_MOUSE='mouse,disable_on_activity' KCFG_KIVY_KEYBOARD_MODE='systemanddock'
+ExecStart=/usr/bin/kivydemo
+
+[Install]
+WantedBy=graphical.target
