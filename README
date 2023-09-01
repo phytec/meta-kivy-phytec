@@ -1,46 +1,40 @@
-This README file contains information on the contents of the meta-phykivy layer.
+This README file contains information on the contents of the meta-kivy-phytec layer.
 
 Please see the corresponding sections below for details.
 
 Dependencies
 ============
 
-  URI: <first dependency>
-  branch: <branch name>
+- meta-openembedded
+- meta-phytec 
+- Bitbake
 
-  URI: <second dependency>
-  branch: <branch name>
+Maintainer
+==========
 
-  .
-  .
-  .
+If you experience any problem with this software, please contact our <support@phytec.de> or the maintainer directly. 
 
-Patches
-=======
-
-Please submit any patches against the meta-phykivy layer to the xxxx mailing list (xxxx@zzzz.org)
-and cc: the maintainer:
-
-Maintainer: XXX YYYYYY <xxx.yyyyyy@zzzzz.com>
+The maintainer of this layer is Martin Schwan <m.schwan@phytec.de>. 
 
 Table of Contents
 =================
 
-  I. Adding the meta-phykivy layer to your build
+  I. Adding the meta-kivy-phytec layer to your build
  II. Misc
 
 
 I. Adding the meta-phykivy layer to your build
 =================================================
 
-Run 'bitbake-layers add-layer meta-phykivy'
+Run 'bitbake-layers add-layer meta-kivy-phytec'
 
 II. Misc
 ========
 
 This layer contains:
-- a fix for sdl2 to make it work with OPENGL ES 
-- a change in the weston init to allow the LVSD output by default instead of HDMI
-- patches for kivy
-- kivyMD bb file (Kivy Material Design) and a patch for it
-- Kivy demo service 
+- a fix for sdl2 to make it work with OPENGL ES I
+- patches for Kivy recipe
+- KivyMD bb file (Kivy Material Design) and a patch for it
+- Kivy demo service
+- a recipe to import PHYTEC pictures on the target (phytecvisuals)
+- an image recipe
