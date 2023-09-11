@@ -5,3 +5,6 @@ SRC_URI += " file://cutbuffer.patch \
     file://kivy_opencv.patch \
    "
 
+REQUIRED_DISTRO_FEATURES:remove = "x11"
+
+ANY_OF_DISTRO_FEATURES = "x11 wayland"
