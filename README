@@ -6,7 +6,8 @@ Dependencies
 ============
 
 - meta-openembedded
-- meta-phytec 
+- meta-phytec
+- meta-ampliphy
 - Bitbake
 
 Maintainer
