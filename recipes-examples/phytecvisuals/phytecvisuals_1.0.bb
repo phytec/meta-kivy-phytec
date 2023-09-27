@@ -16,7 +16,7 @@ SRC_URI = "https://download.phytec.de/Software/Linux/Applications/Media/phytec_l
 do_install(){
     install -d ${D}${datadir}/phytecvisuals
     for file in ${WORKDIR}/visuals/*;do
-        install -m 0755 "$file" ${D}${datadir}/phytecvisuals
+        install -m 0644 "$file" ${D}${datadir}/phytecvisuals
     done
 }
 
