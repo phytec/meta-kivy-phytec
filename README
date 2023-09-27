@@ -35,7 +35,6 @@ II. Misc
 This layer contains:
 - a fix for sdl2 to make it work with OPENGL ES I
 - patches for Kivy recipe
-- KivyMD bb file (Kivy Material Design) and a patch for it
 - Kivy demo service
 - a recipe to import PHYTEC pictures on the target (phytecvisuals)
 - an image recipe
