@@ -25,6 +25,8 @@ do_install:append(){
 }
 
 RDEPENDS:${PN} += " \
+    python3-kivy \
+    configkivy \
     weston \
     weston-init \
     phytecvisuals \
