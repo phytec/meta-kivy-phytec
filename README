@@ -6,15 +6,18 @@ Dependencies
 ============
 
 - meta-openembedded
-- meta-phytec 
+- meta-phytec
+- meta-ampliphy
 - Bitbake
 
 Maintainer
 ==========
 
-If you experience any problem with this software, please contact our <support@phytec.de> or the maintainer directly. 
+If you experience any problem with this software, please contact our
+<support@phytec.de> or the maintainer directly.
 
-The maintainer of this layer is Martin Schwan <m.schwan@phytec.de>. 
+The maintainers of this layer are Martin Schwan <m.schwan@phytec.de> and
+Leonard Anderweit <l.anderweit@phytec.de>.
 
 Table of Contents
 =================
@@ -34,7 +37,6 @@ II. Misc
 This layer contains:
 - a fix for sdl2 to make it work with OPENGL ES I
 - patches for Kivy recipe
-- KivyMD bb file (Kivy Material Design) and a patch for it
 - Kivy demo service
 - a recipe to import PHYTEC pictures on the target (phytecvisuals)
 - an image recipe
